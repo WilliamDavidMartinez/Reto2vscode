@@ -1,0 +1,71 @@
+--creacion tabla cliente
+CREATE TABLE "ADMIN"."CLIENT" 
+   (	"ID" NUMBER, 
+	"NAME" VARCHAR2(4000 BYTE) COLLATE "USING_NLS_COMP", 
+	"EMAIL" VARCHAR2(60 BYTE) COLLATE "USING_NLS_COMP", 
+	"AGE" NUMBER
+   )  DEFAULT COLLATION "USING_NLS_COMP" ;
+
+CREATE UNIQUE INDEX "ADMIN"."PK_CLIENT" ON "ADMIN"."CLIENT" ("ID") 
+  ;
+
+ALTER TABLE "ADMIN"."CLIENT" ADD CONSTRAINT "PK_CLIENT" PRIMARY KEY ("ID")
+  USING INDEX  ENABLE;
+  
+ --creacion tabla message
+ 
+CREATE TABLE "ADMIN"."MESSAGE" 
+   (	"ID" NUMBER, 
+	"MESSAGETEXT" VARCHAR2(4000 BYTE) COLLATE "USING_NLS_COMP"
+   )  DEFAULT COLLATION "USING_NLS_COMP" ;
+
+CREATE UNIQUE INDEX "ADMIN"."PK_MESSAGE" ON "ADMIN"."MESSAGE" ("ID") 
+  ;
+
+ALTER TABLE "ADMIN"."MESSAGE" ADD CONSTRAINT "PK_MESSAGE" PRIMARY KEY ("ID")
+  USING INDEX  ENABLE;
+
+
+
+--get client
+SELECT * FROM CLIENT
+--post client
+BEGIN
+INSERT INTO CLIENT (ID,NAME,EMAIL,AGE) VALUES(:id,:name,:email,:age);
+:status_code :=201;
+END;
+--put client 
+BEGIN
+update CLIENT 
+set NAME=:name
+,EMAIL=:email
+,AGE=:age
+WHERE ID=:id;
+:status_code := 201;
+END;
+--del client 
+BEGIN 
+    DELETE FROM CLIENT
+    WHERE ID=:id;
+    :status_code := 204;
+END;
+
+--get messge
+select * from MESSAGE
+
+--put message
+BEGIN
+    UPDATE MESSAGE
+    SET MESSAGETEXT=:messagetext
+    WHERE ID=:id;
+    :status_code :=201;
+END;
+
+--post message 
+BEGIN
+    INSERT INTO MESSAGE(ID,MESSAGETEXT)
+        VALUES (:id,:messagetext);
+    :status_code :=201;
+END;
+
+--del message 

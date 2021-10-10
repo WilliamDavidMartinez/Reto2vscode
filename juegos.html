@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Módulo Juegos</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/misFunciones.js"></script>
+    </head>
+    <body>
+        <h1>Módulo de Juegos</h1>
+        <div id="resultado"></div>
+        <button onclick="traerInformacionJuego()">Consultar Juegos</button>
+        <div>
+            <input type="number" id="id" placeholder="Id">
+            <input type="text" id="developer" placeholder="Developer">
+            <input type="number" id="minage" placeholder="Minage">
+            <input type="number" id="category_id" placeholder="Category Id">
+            <input type="text" id="name" placeholder="Name">
+        </div>
+        <button onclick="guardarInformacionJuego()">Guardar Mensaje</button>
+        <button onclick="actualizarInformacionJuego()">Actualizar Mensaje</button>
+
+        <p> <a href="index.html">Pagina Principal</a></p>
+    </body>
+</html>
