@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    outline: none;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+h1 {
+    background-color: darkslategrey;
+    margin: 100px auto;
+    padding: 20px 10px;
+    width: 190px;
+    border-radius: 6px;
+    color:blue;
+}
