@@ -10,12 +10,13 @@ body {
 }
 
 h1 {
-    background-color: darkslategrey;
-    margin: 100px auto;
-    padding: 20px 10px;
-    width: 190px;
-    border-radius: 6px;
-    color:blue;
+    background-color: black;
+    margin: 3% auto;
+    padding: 1%;
+    border-radius: 2px;
+    color:white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
 }
 
 #BTNCONSULT{
