@@ -16,10 +16,19 @@ h1 {
     width: 190px;
     border-radius: 6px;
     color:blue;
-}#BTNCONSULT{
+}
+
+#BTNCONSULT{
     background-color: forestgreen;
 }
 
-#btnguardar {
-    background-color: yellow;
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    width: 30%;
+    box-sizing: border-box;
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    text-align: center;
 }
